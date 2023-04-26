@@ -2,20 +2,27 @@
 
 Ссылка для просмотра проекта в браузере: https://verygood-agency.github.io/kalinkastore__personal-new-pages/
 
+## Информация по изменениям для программиста
 
-## Информация по изменениям для программиста:
+1.новые стили с корневом файле 'new-style.css' их нужно экспортировать на сайт самыми последними, так как они переопределяют стилизацию существующих элементов.
 
-1. новые стили с корневом файле 'new-style.css' их нужно экспортировать на сайт самыми последними, так как они переопределяют стилизацию существующих элементов.
-
-2. на страницах с формой подтверждения:
+2.на страницах с формой подтверждения:
 https://verygood-agency.github.io/kalinkastore__personal-new-pages/bonus-2.html
 https://verygood-agency.github.io/kalinkastore__personal-new-pages/bonus-1.html
 
-модифицирован заголовок <h2 class="login__form-title login__form-title--mod">Введите код</h2>
-добавлен подзаголовок <p class="login__form-subtitle">Введите Ваш телефон, на него будет отправлен код для подтверждения</p>
-добавлена кастомная кнопка отправки <button class="custom-submit-button" type="submit">Подтвердить</button>
+модифицирован заголовок
 
-3. На странице профиля https://verygood-agency.github.io/kalinkastore__personal-new-pages/profile.html
+        '<h2 class="login__form-title login__form-title--mod">Введите код</h2>'
+
+добавлен подзаголовок
+
+        '<p class="login__form-subtitle">Введите Ваш телефон, на него будет отправлен код для подтверждения</p>'
+
+добавлена кастомная кнопка отправки
+
+          '<button class="custom-submit-button" type="submit">Подтвердить</button>'
+
+3.На странице профиля https://verygood-agency.github.io/kalinkastore__personal-new-pages/profile.html
 
 добавлен еще один блок:
 
@@ -29,8 +36,12 @@ https://verygood-agency.github.io/kalinkastore__personal-new-pages/bonus-1.html
         </a>
       </div>
 
-4. На странице корзины https://verygood-agency.github.io/kalinkastore__personal-new-pages/cart.html сильно модифицированы теги в разметке элемента <div class="basket__sum-block basket__sum-block--mod" id="user-cart-settings">, а так же внутри добавлены новые теги (вложенные в него элементы разметки).
+4.На странице корзины https://verygood-agency.github.io/kalinkastore__personal-new-pages/cart.html сильно модифицированы теги в разметке элемента 
 
-5. Скрипты написаты только к новым элементам корзины. всё лежит в корневом файле 'scripts.js'.
+        <div class="basket__sum-block basket__sum-block--mod" id="user-cart-settings">,
+        
+а так же внутри добавлены новые теги (вложенные в него элементы разметки).
 
-6. новая иокнка лежит в папке img/bonus.svg
+5.Новые скрипты написаны только к новым элементам корзины. всё лежит в корневом файле 'scripts.js'.
+
+6.новая иконка лежит в папке img/bonus.svg
