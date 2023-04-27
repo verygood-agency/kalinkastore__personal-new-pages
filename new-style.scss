@@ -212,9 +212,8 @@ input[type="range"]::-webkit-slider-thumb:active {
   &:hover,
   &:focus,
   &:active {
-    background-color: rgba(177, 25, 30, .5);
+    background-color: rgba(177, 25, 30, 0.5);
   }
-
 }
 
 .login__form-fieldset--bottom {
@@ -245,7 +244,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 .catalog__header-title {
-  font-family: 'Tenor Sans';
+  font-family: "Tenor Sans";
 }
 
 @media (max-width: 990px) {
@@ -263,5 +262,123 @@ input[type="range"]::-webkit-slider-thumb:active {
     // .basket__sum-row {
     //   justify-content: flex-start;
     // }
+  }
+}
+
+// Облако тегов
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.custom-tags {
+  margin-bottom: 32px;
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+  &__item {
+    flex-shrink: 0;
+  }
+  &__link {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #000100;
+    background: #ececec;
+    border-radius: 2px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    position: relative;
+    transition: all 0.3s;
+
+    svg {
+      position: absolute;
+      path {
+        transition: all 0.3s;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #b1191e;
+
+    svg {
+      path {
+        stroke: #ffffff
+      }
+    }
+    }
+  }
+}
+
+.custom-tags--desktop {
+  &:first-of-type a {
+    margin-left: 32px;
+  }
+  &:last-of-type a {
+    margin-right: 32px;
+  }
+}
+
+.custom-tags--mobile {
+  display: none;
+}
+.custom-tags--footer {
+  margin-top: 32px;
+  .custom-tags__list {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 720px) {
+  .custom-tags {
+    &--desktop {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+
+      .custom-tags__list {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+        overflow: scroll;
+        // padding: 0 15px;
+      }
+      .custom-tags__item:first-of-type a {
+        margin-left: 0;
+      }
+      .custom-tags__item:last-of-type a {
+        margin-right: 0;
+      }
+    }
   }
 }

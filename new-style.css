@@ -240,3 +240,105 @@ input[type=range]::-webkit-slider-thumb:active {
     width: initial;
   }
 }
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list-reset li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list-reset li:before {
+  display: none;
+}
+
+.custom-tags {
+  margin-bottom: 32px;
+}
+.custom-tags__list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+}
+.custom-tags__item {
+  flex-shrink: 0;
+}
+.custom-tags__link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000100;
+  background: #ececec;
+  border-radius: 2px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  position: relative;
+  transition: all 0.3s;
+}
+.custom-tags__link svg {
+  position: absolute;
+}
+.custom-tags__link svg path {
+  transition: all 0.3s;
+}
+.custom-tags__link:hover, .custom-tags__link:focus, .custom-tags__link:active {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #b1191e;
+}
+.custom-tags__link:hover svg path, .custom-tags__link:focus svg path, .custom-tags__link:active svg path {
+  stroke: #ffffff;
+}
+
+.custom-tags--desktop:first-of-type a {
+  margin-left: 32px;
+}
+.custom-tags--desktop:last-of-type a {
+  margin-right: 32px;
+}
+
+.custom-tags--mobile {
+  display: none;
+}
+
+.custom-tags--footer {
+  margin-top: 32px;
+}
+.custom-tags--footer .custom-tags__list {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 720px) {
+  .custom-tags--desktop {
+    display: none;
+  }
+  .custom-tags--mobile {
+    display: block;
+  }
+  .custom-tags--mobile .custom-tags__list {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    overflow: scroll;
+  }
+  .custom-tags--mobile .custom-tags__item:first-of-type a {
+    margin-left: 0;
+  }
+  .custom-tags--mobile .custom-tags__item:last-of-type a {
+    margin-right: 0;
+  }
+}
